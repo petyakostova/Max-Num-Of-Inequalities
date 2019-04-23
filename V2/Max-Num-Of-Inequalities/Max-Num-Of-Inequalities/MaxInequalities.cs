@@ -16,14 +16,14 @@ namespace Max_Num_Of_Inequalities
 
             //Input
             Console.WriteLine("Please enter the path to the inequalities.in.txt");
-            Console.WriteLine("Example => C:\\Users\\petya.ko\\Desktop\\Max-Num-Of-Inequalities\\Max-Num-Of-Inequalities\\inequalities.in.txt");
+            Console.WriteLine("Example =>\nC:\\Users\\petya.ko\\Desktop\\Max-Num-Of-Inequalities\\Max-Num-Of-Inequalities\\inequalities.in.txt");
             string inputPath = Console.ReadLine();
 
             string outputPath = inputPath.Replace("inequalities.in.txt", "inequalities.out.txt");
 
             FindRange(inputPath, out min, out max);
 
-            FindMaxInequalitiesCount(inputPath, out maxInequalitiesCount, out optimalX);
+            FindMaxInequalitiesCountAndOptimalX(inputPath, out maxInequalitiesCount, out optimalX);
 
             List<string> inequalities = new List<string>();
             FindSetsOfInequalities(inputPath, out inequalities);
@@ -73,7 +73,7 @@ namespace Max_Num_Of_Inequalities
             }
         }
 
-        private static void FindMaxInequalitiesCount(string inputPath, out int maxInequalitiesCount, out int optimalX)
+        private static void FindMaxInequalitiesCountAndOptimalX(string inputPath, out int maxInequalitiesCount, out int optimalX)
         {
             maxInequalitiesCount = 0;
             optimalX = min;
